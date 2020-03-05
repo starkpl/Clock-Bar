@@ -16,8 +16,6 @@
 		11B86E661EDE9BD00069D254 /* DFRFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B86E651EDE9BD00069D254 /* DFRFoundation.framework */; };
 		11B86E981EDEC6720069D254 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11B86E921EDEAD1D0069D254 /* ServiceManagement.framework */; };
 		D53AAC71205497DB00767C9A /* ClickableTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D53AAC70205497DB00767C9A /* ClickableTextField.m */; };
-		D53E002C2054A19A001625A6 /* clock-64.png in Resources */ = {isa = PBXBuildFile; fileRef = D53E002B2054A19A001625A6 /* clock-64.png */; };
-		D53E002E2054A1AB001625A6 /* clock-64.png in Resources */ = {isa = PBXBuildFile; fileRef = D53E002D2054A1AA001625A6 /* clock-64.png */; };
 		D53E00302054A1B1001625A6 /* clock-64.png in Resources */ = {isa = PBXBuildFile; fileRef = D53E002F2054A1B1001625A6 /* clock-64.png */; };
 		D5A462752054B17B00E8B47E /* Clock Launcher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5A462652054B06B00E8B47E /* Clock Launcher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -215,6 +213,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -250,9 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D53E00302054A1B1001625A6 /* clock-64.png in Resources */,
-				D53E002C2054A19A001625A6 /* clock-64.png in Resources */,
 				11B86E5A1EDE9B4D0069D254 /* Assets.xcassets in Resources */,
-				D53E002E2054A1AB001625A6 /* clock-64.png in Resources */,
 				11B86E5D1EDE9B4D0069D254 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,9 +385,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Clock Bar.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3K68XHVR7W;
+				DEVELOPMENT_TEAM = N4L37352FV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
@@ -409,9 +406,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Clock Bar.entitlements";
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3K68XHVR7W;
+				DEVELOPMENT_TEAM = N4L37352FV;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",

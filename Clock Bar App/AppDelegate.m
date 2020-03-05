@@ -103,6 +103,14 @@ NSMutableAttributedString *colorTitle;
     
     timeformatter = [[NSDateFormatter alloc] init];
     [timeformatter setTimeStyle: NSDateFormatterShortStyle];
+    
+    if ([[NSUserDefaults standardUserDefaults] stringForKey:@"format"] == nil) {
+    
+        [[NSUserDefaults standardUserDefaults] setObject:@"hh:mm" forKey:@"format"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    format = [[NSUserDefaults standardUserDefaults] stringForKey:@"format"];
     [timeformatter setDateFormat:format];
     
     NSDate *now = [NSDate date];
@@ -194,6 +202,7 @@ NSMutableAttributedString *colorTitle;
         format = @"hh:mm";
     }
     [timeformatter setDateFormat:format];
+    [[NSUserDefaults standardUserDefaults] setObject:format forKey:@"format"];
 }
 
 - (void)onLongPressed:(TouchButton*)sender

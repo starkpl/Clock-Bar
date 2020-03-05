@@ -4,7 +4,6 @@
 
 @property (weak) IBOutlet NSButton *autoLoginState;
 @property (weak) IBOutlet NSButton *showInMenuBarState;
-@property (weak) IBOutlet NSComboBox *selectTimeFormat;
 
 
 
