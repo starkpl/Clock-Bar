@@ -12,9 +12,17 @@ static void *MASObservingContext = &MASObservingContext;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    AppDelegate *appDelegate = (AppDelegate *) [[NSApplication sharedApplication] delegate];
+    
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"auto_login"] == nil) {
     
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"auto_login"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    if ([[NSUserDefaults standardUserDefaults] stringForKey:@"format"] == nil) {
+    
+        [[NSUserDefaults standardUserDefaults] setObject:@"hh:mm" forKey:@"format"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
         
@@ -23,6 +31,13 @@ static void *MASObservingContext = &MASObservingContext;
     
     BOOL hideStatusBarState = [[NSUserDefaults standardUserDefaults] boolForKey:@"hide_status_bar"];
     [self.showInMenuBarState setState: hideStatusBarState];
+    
+    NSString *format = [[NSUserDefaults standardUserDefaults] stringForKey:@"format"];
+    if ([format isEqualToString:@"hh:mm"]) {
+        [self.selectTimeFormat selectItemAtIndex:0];
+    } else if ([format isEqualToString:@"HH:mm"]) {
+        [self.selectTimeFormat selectItemAtIndex:1];
+    }
     
     NSLog(@"View Load");
 }
